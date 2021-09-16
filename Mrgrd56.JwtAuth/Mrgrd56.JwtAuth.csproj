@@ -1,6 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>MRGRD56.JwtAuth</PackageId>
+        <Authors>MRGRD56</Authors>
+        <PackageProjectUrl>https://github.com/MRGRD56/JwtAuth</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/MRGRD56/JwtAuth</RepositoryUrl>
+        <PackageTags>aspnetcore jwt auth authentication authorization</PackageTags>
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 

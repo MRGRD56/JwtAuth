@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
+using Mrgrd56.JwtAuth.Extensions;
 using Mrgrd56.JwtAuth.TestApp.Models;
 
 namespace Mrgrd56.JwtAuth.TestApp.Services
@@ -16,7 +17,7 @@ namespace Mrgrd56.JwtAuth.TestApp.Services
 
         public User GetCurrent(ClaimsPrincipal claimsPrincipal)
         {
-            var idClaim = claimsPrincipal.FindFirst(ClaimTypes.NameIdentifier);
+            var idClaim = claimsPrincipal.GetIdClaim();
             if (idClaim == null) return null;
             
             var userId = Guid.Parse(idClaim.Value);
